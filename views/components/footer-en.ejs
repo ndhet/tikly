@@ -1,0 +1,75 @@
+<footer class="page-footer welcome">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">
+            Ytfily adalah salah satu alat online Terbaik untuk Download
+            Video semua sosial media tanpa watermark, Anda juga dapat Download musik MP3
+            secara gratis.
+          </p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Quick Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="/terms"
+                >Terms of Use</a
+              >
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="/privacy"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="/contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">More Tools</h5>
+          <ul>
+            <li>
+              <a
+                class="grey-text text-lighten-3"
+                target="_blank"
+                href="https://wa.me/+6282125388500"
+                >Whatsapp BOT Deadrz</a
+              >
+              <a
+                class="grey-text text-lighten-3"
+                target="_blank"
+                href="https://rest-api.sshaxor.com"
+                >Rest API</a
+              >
+            </li>
+          </ul>
+        </div>
+     <div class="col l3 s12">
+          <h5 class="white-text">Informasi</h5>
+          <ul>
+            <li class="grey-text text-lighten-3">
+              Your IP: <%= ipAddr %>
+              </li>
+             <li class="grey-text text-lighten-3">
+              Browser: <%= ua.browser %>
+            </li>
+           <li class="grey-text text-lighten-3">
+              Platform: <%= ua.platform  %>
+            </li>
+         <li class="grey-text text-lighten-3">
+              Response Time: <%= (Date.now() - speeds) / 1000 %> Seconds
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <%= new Date().getFullYear() %> © Tikly, Dibuat oleh <a class="grey-text text-lighten-3" href="//sshaxor.com">Dedi Humaedi</a>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("components/header-en", { titlecustom: `Contact us | ${titleweb}`, description: `Contact ${titleweb}, If you have any problem using the ${titleweb} Tiktok downloader tool or want to give any suggestions then feel free to contact us.`}) %>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="bg">
+        <div class="nav-wrapper">
+          <a href="index.html" class="cushead brand-logo center"
+            ><%= titleweb %></a
+          ><a
+            href="/contact"
+            data-target="mobile-demo"
+            class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="left hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            
+            
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about">About</a></li>
+      
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header"
+              >Language<i class="material-icons">arrow_drop_down</i></a
+            >
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="/en">English</a></li>
+                <li><a href="/id">Bahasa Indonesia</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="welcome center">
+      <div class="container">
+        <div style="padding: 20px 0 20px 0" class="row">
+          <div class="col s12">
+            <h1 class="headone white-text">Contact Us - <%= titleweb %></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row section">
+        <div
+          class="col m10 offset-m1 z-depth-1 s12"
+          style="border-top: 5px solid #ef124e"
+        >
+          <p class="center-align">
+            If you have any questions or would like to report errors, please
+            contact us below.
+          </p>
+          <div class="divider"></div>
+          <div class="row">
+            <form
+              class="col m8 offset-m2 s12"
+              action="/contact"
+              method="post"
+            >
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">account_circle</i
+                  ><input id="name" name="name" type="text" required />
+                  <label for="name">Name</label>
+                </div>
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i
+                  ><input
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="form-input"
+                    required
+                  />
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">edit</i
+                  ><textarea
+                    id="message"
+                    name="message"
+                    class="materialize-textarea"
+                    required
+                  ></textarea
+                  ><label for="message">Message</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col m12">
+                  <p class="center-align">
+                    <button
+                      class="btn btn-large waves-effect waves-light orange"
+                      type="submit"
+                    >
+                      <i class="material-icons left">send</i> Send Message
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include("components/footer-en") %>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      type="text/javascript"
+    ></script>
+    <% if (locals.success == true) { %>
+    <script>
+    M.toast({ html: "Your message has been successfully sent" })
+    </script>
+    <% } else if (locals.success == false) { %>
+    <script>
+    M.toast({ html: "message failed to send, please enter correctly!" })
+    </script>
+    <% } %>
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+                  window.addEventListener("load", function() {
+                      navigator.serviceWorker.register("/service-worker.js");
+                  });
+              }
+              $(document).ready(function() {
+                  $('.sidenav').sidenav();
+              });
+              $(document).ready(function() {
+                  $('.collapsible').collapsible();
+              });
+              $(".dropdown-trigger").dropdown();
+    </script>
+    
+  </body>
+</html>
